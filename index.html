@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexporta | China to Canada Sourcing, Inspection and Import Services</title>
+<meta name="description" content="Nexporta helps Canadian businesses source, manufacture, inspect and import products from China. Full-service sourcing agency: supplier vetting, quality inspection, freight and customs into Canada.">
+<style>
+  :root{
+    --navy-dark:#081B36;
+    --navy:#0A2D5C;
+    --blue:#00518F;
+    --steel:#5D8AA8;
+    --accent:#A9C6DE;
+    --bg:#f6f9fc;
+    --text:#1f2d3d;
+    --muted:#5a6b7d;
+    --white:#ffffff;
+    --line:#e3e9f1;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+  header{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .logo{display:flex;align-items:center;text-decoration:none;}
+  .logo svg{height:40px;width:auto;display:block;}
+  nav ul{display:flex;gap:28px;list-style:none;}
+  nav a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem;}
+  nav a:hover{color:var(--navy);}
+  .nav-cta{background:var(--accent);color:var(--navy-dark) !important;padding:10px 18px;border-radius:6px;font-weight:700;}
+  .nav-cta:hover{filter:brightness(1.05);}
+  @media(max-width:760px){nav ul{display:none;}}
+  .hero{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 55%,var(--steel) 130%);color:var(--white);padding:96px 0 88px;}
+  .hero h1{font-size:clamp(1.9rem,4.5vw,3.1rem);line-height:1.15;font-weight:800;max-width:760px;}
+  .hero h1 em{color:var(--accent);font-style:normal;}
+  .hero p{margin-top:20px;font-size:1.15rem;max-width:640px;color:#cfe0f2;}
+  .hero-cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:14px 28px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;}
+  .btn-primary{background:var(--accent);color:var(--navy-dark);}
+  .btn-primary:hover{filter:brightness(1.06);}
+  .btn-ghost{border:2px solid #ffffff55;color:var(--white);}
+  .btn-ghost:hover{border-color:#fff;}
+  .trust{background:var(--white);border-bottom:1px solid var(--line);}
+  .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;padding:26px 0;text-align:center;}
+  .trust-grid strong{display:block;color:var(--navy);font-size:1.05rem;}
+  .trust-grid small{color:var(--muted);}
+  section{padding:76px 0;}
+  .kicker{color:var(--steel);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem;}
+  h2{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--navy);margin-top:8px;}
+  .lead{margin-top:14px;color:var(--muted);max-width:680px;}
+  .cards{margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px;transition:transform .15s ease, box-shadow .15s ease;}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(14,42,71,.10);}
+  .card .icon{width:46px;height:46px;border-radius:10px;background:#eef4fb;display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:16px;}
+  .card h3{color:var(--navy);font-size:1.12rem;margin-bottom:8px;}
+  .card p{color:var(--muted);font-size:.95rem;}
+  .process{background:var(--white);}
+  .steps{margin-top:44px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;counter-reset:step;}
+  .step{position:relative;padding:26px 26px 26px 74px;background:var(--bg);border:1px solid var(--line);border-radius:12px;}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;left:22px;top:24px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--white);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+  .step h3{color:var(--navy);font-size:1.05rem;margin-bottom:6px;}
+  .step p{color:var(--muted);font-size:.93rem;}
+  .who-grid{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+  .who{background:var(--white);border-left:4px solid var(--blue);border-radius:8px;padding:22px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .who h3{color:var(--navy);font-size:1.02rem;margin-bottom:6px;}
+  .who p{color:var(--muted);font-size:.93rem;}
+  .about{background:var(--navy);color:var(--white);}
+  .about .kicker{color:var(--accent);}
+  .about h2{color:var(--white);}
+  .about p{color:#cfe0f2;max-width:760px;margin-top:16px;}
+  .contact-grid{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-info h3{color:var(--navy);margin-bottom:10px;}
+  .contact-info p{color:var(--muted);margin-bottom:18px;}
+  .contact-line{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--text);font-weight:600;}
+  .contact-line a{color:var(--blue);text-decoration:none;}
+  .contact-line a:hover{text-decoration:underline;}
+  form{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px;}
+  label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px;color:var(--navy);}
+  input,textarea,select{width:100%;padding:12px 14px;border:1px solid #ccd6e2;border-radius:8px;font-size:.95rem;margin-bottom:18px;font-family:inherit;background:var(--bg);}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--steel);border-color:var(--steel);}
+  button{width:100%;background:var(--navy);color:var(--white);border:none;padding:15px;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;}
+  button:hover{background:var(--navy-dark);}
+  .form-note{font-size:.83rem;color:var(--muted);margin-top:12px;text-align:center;}
+  footer{background:var(--navy-dark);color:#9fb3c8;padding:34px 0;font-size:.9rem;}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  footer a{color:#cfe0f2;text-decoration:none;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Nexporta home">
+      <svg viewBox="0 0 232 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nexporta logo">
+        <path d="M3 39 Q 25 48 49 36" stroke="#00518F" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <path d="M7 29 h38 l-6.5 8.5 H13.5 z" fill="#0A2D5C"/>
+        <rect x="11" y="23" width="8.5" height="5" rx="0.8" fill="#00518F"/>
+        <rect x="20.5" y="23" width="8.5" height="5" rx="0.8" fill="#5D8AA8"/>
+        <rect x="30" y="23" width="8.5" height="5" rx="0.8" fill="#A9C6DE"/>
+        <rect x="15" y="17" width="8.5" height="5" rx="0.8" fill="#5D8AA8"/>
+        <rect x="24.5" y="17" width="8.5" height="5" rx="0.8" fill="#00518F"/>
+        <rect x="39" y="18" width="4.5" height="10" rx="0.8" fill="#0A2D5C"/>
+        <rect x="39.8" y="20" width="3" height="1.6" fill="#A9C6DE"/>
+        <text x="58" y="35" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing="2.5" fill="#0A2D5C">NEX<tspan fill="#00518F">PORTA</tspan></text>
+      </svg>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#who">Who We Help</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a class="nav-cta" href="#contact">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>Source, manufacture and import from China, <em>without the guesswork.</em></h1>
+    <p>Nexporta is your on-the-ground partner for buying from China. We find the right factories, negotiate on your behalf, inspect every order, and get your goods safely through Canadian customs. You focus on selling. We handle the rest.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">Start Your Sourcing Project</a>
+      <a class="btn btn-ghost" href="#process">See How It Works</a>
+    </div>
+  </div>
+</section>
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div><strong>Offices in Canada &amp; Shanghai</strong><small>14 years on the ground in China</small></div>
+    <div><strong>Factory-Direct Pricing</strong><small>We negotiate for you</small></div>
+    <div><strong>On-Site Inspections</strong><small>Before anything ships</small></div>
+    <div><strong>Customs Cleared</strong><small>Delivered to your door</small></div>
+  </div>
+</div>
+<section id="services">
+  <div class="wrap">
+    <span class="kicker">What We Do</span>
+    <h2>Full-service sourcing, from first idea to your warehouse</h2>
+    <p class="lead">Whether you need one service or the whole chain handled, we plug in exactly where you need us.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🔍</div>
+        <h3>Product Sourcing</h3>
+        <p>Tell us what you want to buy or build. We identify vetted manufacturers in China that match your specs, quality bar and budget, then send you real quotes to compare.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <h3>Supplier Vetting &amp; Negotiation</h3>
+        <p>We verify business licenses, audit factories and negotiate pricing and payment terms in the supplier's own language. No middlemen markups, no surprises.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏭</div>
+        <h3>Manufacturing Management</h3>
+        <p>From samples and tooling to full production runs, we manage timelines, follow up with the factory and keep your project moving so deadlines actually get met.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✅</div>
+        <h3>Quality Inspection</h3>
+        <p>Pre-production, during-production and pre-shipment inspections at the factory. Defects get caught in China, not in your Canadian warehouse when it's too late.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🚢</div>
+        <h3>Shipping &amp; Freight</h3>
+        <p>Sea, air or express. We book the freight, prepare the paperwork and track your cargo from the factory floor to the port of entry.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🍁</div>
+        <h3>Customs &amp; Import into Canada</h3>
+        <p>Duties, tariff classification, customs clearance and final delivery. We make sure your goods enter Canada compliantly and land where you need them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="process" id="process">
+  <div class="wrap">
+    <span class="kicker">How It Works</span>
+    <h2>A clear process, so you always know where your money is</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Tell Us What You Need</h3>
+        <p>Share your product idea, specs or an existing listing. We'll scope the project and give you an honest read on feasibility and cost.</p>
+      </div>
+      <div class="step">
+        <h3>Get Supplier Options</h3>
+        <p>We shortlist vetted factories and present real quotes, lead times and minimum order quantities so you can decide with clarity.</p>
+      </div>
+      <div class="step">
+        <h3>Sample &amp; Approve</h3>
+        <p>Samples come to you before any bulk order. Nothing goes into production until you've held the product in your hands and approved it.</p>
+      </div>
+      <div class="step">
+        <h3>Production &amp; Inspection</h3>
+        <p>We oversee manufacturing and inspect the goods at the factory against your approved sample and checklist.</p>
+      </div>
+      <div class="step">
+        <h3>Ship &amp; Clear Customs</h3>
+        <p>We arrange freight, handle export and import documentation, and clear your shipment through Canadian customs.</p>
+      </div>
+      <div class="step">
+        <h3>Delivered to You</h3>
+        <p>Your goods arrive at your warehouse, 3PL or Amazon FBA, ready to sell. Then we do it again for your next order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="who">
+  <div class="wrap">
+    <span class="kicker">Who We Help</span>
+    <h2>Built for Canadian businesses that buy from China</h2>
+    <div class="who-grid">
+      <div class="who">
+        <h3>E-commerce &amp; Amazon Sellers</h3>
+        <p>Develop private label products, improve existing ones and ship directly to FBA or your 3PL.</p>
+      </div>
+      <div class="who">
+        <h3>Retailers &amp; Wholesalers</h3>
+        <p>Cut out import agents and buy factory-direct with inspections protecting every order.</p>
+      </div>
+      <div class="who">
+        <h3>Startups &amp; Product Creators</h3>
+        <p>Turn a concept into a manufactured product with a partner who's done it before.</p>
+      </div>
+      <div class="who">
+        <h3>Established Importers</h3>
+        <p>Already importing? Use us for inspections, freight or supplier backup so one weak link never stops your supply chain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="wrap">
+    <span class="kicker">About Nexporta</span>
+    <h2>We import for ourselves. That's why we're good at it for you.</h2>
+    <p>Nexporta Global Trade &amp; Logistics isn't a directory or a broker passing your request down a chain. We're an import and export company with our head office in North Vancouver and our own team on the ground in Shanghai, an office that has been operating for nearly 14 years. We source, manufacture, inspect and ship products from China into Canada, and we run our own imports through the exact same process we offer our clients. Every factory relationship, every inspection checklist and every customs lesson we've learned the hard way now works for your business.</p>
+  </div>
+</section>
+<section id="contact">
+  <div class="wrap">
+    <span class="kicker">Get Started</span>
+    <h2>Tell us about your project</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's talk sourcing</h3>
+        <p>Send us a few details about what you want to source or import, and we'll come back to you with next steps, usually within one business day.</p>
+        <div class="contact-line">📧 <a href="mailto:info@nexporta.com">info@nexporta.com</a></div>
+        <h3 style="margin-top:26px;">Canada Head Office</h3>
+        <div class="contact-line">📍 143 21st St E, North Vancouver, BC, Canada</div>
+        <div class="contact-line">📞 <a href="tel:+17788200932">+1 778 820 0932</a></div>
+        <h3 style="margin-top:26px;">Shanghai Office</h3>
+        <div class="contact-line">📍 255 Xiao Tang Road, Feng Xian District, Shanghai, China</div>
+        <div class="contact-line">📞 <a href="tel:+8613472656517">+86 134 7265 6517</a></div>
+        <p style="margin-top:22px;">Prefer email? Write to us directly with your product details, target quantity and timeline.</p>
+      </div>
+      <form action="mailto:info@nexporta.com" method="post" enctype="text/plain" onsubmit="return buildMailto(this);">
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text" required placeholder="Jane Smith">
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" placeholder="Your business name">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@company.com">
+        <label for="service">What do you need?</label>
+        <select id="service" name="service">
+          <option>Product sourcing</option>
+          <option>Manufacturing a new product</option>
+          <option>Quality inspection</option>
+          <option>Shipping and import to Canada</option>
+          <option>Full service, start to finish</option>
+        </select>
+        <label for="message">Project details</label>
+        <textarea id="message" name="message" rows="4" required placeholder="What product, roughly what quantity, and your timeline"></textarea>
+        <button type="submit">Send Inquiry</button>
+        <p class="form-note">Your message goes straight to info@nexporta.com</p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 Nexporta Global Trade &amp; Logistics Ltd. China to Canada sourcing, inspection and import services.<br>
+    143 21st St E, North Vancouver, BC, Canada · 255 Xiao Tang Road, Feng Xian District, Shanghai, China</div>
+    <div><a href="mailto:info@nexporta.com">info@nexporta.com</a></div>
+  </div>
+</footer>
+<script>
+function buildMailto(f){
+  var subject = "Sourcing inquiry from " + f.name.value + (f.company.value ? " (" + f.company.value + ")" : "");
+  var body = "Name: " + f.name.value + "\n"
+           + "Company: " + f.company.value + "\n"
+           + "Email: " + f.email.value + "\n"
+           + "Service: " + f.service.value + "\n\n"
+           + f.message.value;
+  window.location.href = "mailto:info@nexporta.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  return false;
+}
+</script>
+</body>
+</html>
